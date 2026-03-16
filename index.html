@@ -16,8 +16,8 @@ body{
   color:rgb(255, 255, 255);
 
  
-  background: url("1111.jpeg") no-repeat;
-  background-size:150% auto;
+  background: url("smile.jpeg") no-repeat;
+  background-size:100% auto;
   background-position: center; 
 }
 .header{
@@ -238,98 +238,6 @@ function goHome(){
   document.getElementById("sikka").style.display="none";
   document.getElementById("gad3").style.display="none";
 }
-</script>
-<!-- Splash Screen مع كتابة عربية كاملة -->
-<div id="splashFinal">
-  <div class="coffee3d"></div>
-  <h1 id="animatedText" dir="rtl">بن الحشم</h1>
-</div>
-
-<style>
-/* 3D Coffee Beans */
-.coffee3d{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  overflow:hidden;
-  pointer-events:none;
-  z-index:1;
-}
-
-.bean{
-  position:absolute;
-  font-size:40px;
-  opacity:0.25;
-  animation:fly linear infinite;
-  transform-style:preserve-3d;
-}
-
-@keyframes fly{
-  0%{
-    transform:translateY(110vh) rotateX(0deg) rotateY(0deg) scale(0.6);
-    opacity:0;
-  }
-  10%{
-    opacity:0.3;
-  }
-  100%{
-    transform:translateY(-20vh) rotateX(360deg) rotateY(360deg) scale(1.2);
-    opacity:0;
-  }
-}
-
-/* النص */
-#animatedText{
-  position:fixed;
-  top:70%;
-  left:50%;
-  transform:translate(120px, -50%); /* يبدأ من اليمين */
-  color:#f1c27d;
-  font-size:90px;
-  letter-spacing:0px; /* الحروف ملزوقة */
-  text-shadow:0 0 30px black;
-  z-index:2;
-  font-family: 'Cairo', sans-serif;
-  transition: transform 1s ease, opacity 1s ease;
-  opacity:0;
-}
-
-/* خروج الشاشة */
-#splashFinal{
-  animation:fadeOut 1s ease forwards;
-  animation-delay:3s;
-}
-
-@keyframes fadeOut{
-  to{
-    opacity:0;
-    visibility:hidden;
-  }
-}
-</style>
-
-<script>
-// إضافة حبوب القهوة 3D
-let container = document.querySelector(".coffee3d");
-for(let i=0;i<35;i++){
-  let bean = document.createElement("div");
-  bean.className = "bean";
-  bean.innerHTML = "🫘";
-  bean.style.left = Math.random()*100 + "vw";
-  bean.style.animationDuration = (4 + Math.random()*5) + "s";
-  bean.style.fontSize = (25 + Math.random()*60) + "px";
-  bean.style.animationDelay = Math.random()*5 + "s";
-  container.appendChild(bean);
-}
-
-// Animation للنص كله
-let textElement = document.getElementById("animatedText");
-setTimeout(()=>{
-  textElement.style.transform = "translate(-50%, -50%)";
-  textElement.style.opacity = "1";
-},100); // يبدأ Animation فور تحميل الصفحة
 </script>
 </body>
 </html>
