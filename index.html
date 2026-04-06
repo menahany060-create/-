@@ -10,14 +10,14 @@ body{
   margin:0;
   font-family:'Tajawal', Arial, sans-serif;
   text-align:center;
-  min-height:110vh;
+  min-height:150vh;
   display:flex;
   flex-direction:column;
   color:rgb(255, 255, 255);
 
  
-  background: url("smile1.jpeg") no-repeat;
-  background-size:165% auto;
+  background: url("smile.jpeg") no-repeat;
+  background-size:cover auto;
   background-position: center; 
 }
 .header{
@@ -147,13 +147,32 @@ body{
   letter-spacing:1px;
   text-shadow:0 0 5px black;
 }
+
 </style>
+<style>body::before {
+  content: "";
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: linear-gradient(270deg, #1a1a1a, #331e80, #000000, #1a1a1a);
+  background-size: 800% 800%;
+  z-index: -1;
+  animation: gradientMove 20s ease infinite;
+  filter: blur(30px);
+  opacity:0.7;
+}
+
+@keyframes gradientMove {
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}</style>
 </head>
 
 <body>
 
 <div class="header">
-  <img src="11111.jpeg" alt="بن الحشم">
+  <img src="logo.png" alt="بن الحشم">
   <div class="logoText">بن الحشم</div>
   <div class="phone">01067968244</div>
 </div>
@@ -213,7 +232,11 @@ body{
 
 
 <div class="footer">
-  شركة سميركو للتعبئه و التغليف
+  <p>ملحوظة: احنا بنستخدم أجود أنواع البن الموجودة في العالم لكن كل توليفة بنسب مختلفه</p>
+ <p> شركة (بن الحشم)التابعه لشركة (سميركو للاستيراد و التصدير) هي شركه اردنية الاصل تأسست عام 1983</p> 
+العنوان :الاردن_السلط_شارع اليرموك
+الهاتف :00962799198420
+    <p>كل الحقوق محفوظه</p>
 </div>
 
 <script>
